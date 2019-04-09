@@ -14,9 +14,7 @@ void main() {
   //sqlfield.onChange.listen(updateTxt);
   sqlfield.value = "CREATE TABLE song_artist(\nsa_id serial,\nsa_name character varying(100) NOT NULL,\nsa_url character varying(100),\nsa_hash numeric(11,0) NOT NULL,\nau_hash numeric(11,0) NOT NULL,\nsa_pop double precision NOT NULL,\nsa_album character varying(100) NOT NULL,\nCONSTRAINT song_artist_pkey PRIMARY KEY (sa_id, sa_hash),\nCONSTRAINT unique_hash_sa UNIQUE (sa_hash))";
 }
-void updateTxt(Event e)  {
-  sqlfield =  querySelector('#sql');
-  result= querySelector('#result');
+void updateTxt(Event e){
   result.value="";
   QueryTable data=new QueryTable();
   
@@ -66,7 +64,7 @@ void updateTxt(Event e)  {
     data.constraints.add(m.group(1));
   }
     //result.text= data.getAttribsStr();
-  result.value='{\n"tname":${data.tname},\n${data.getAttribsStr()},\n${data.getConstraintStr()}\n}';
+  result.value='{\n"tname":"${data.tname}",\n${data.getAttribsStr()},\n${data.getConstraintStr()}\n}';
 }
 class QueryTable{
   String tname;
