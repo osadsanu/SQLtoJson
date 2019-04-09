@@ -13,7 +13,8 @@ Also i am playing with some RegExp
 Bonus! "compile" the dart js. and use it with git pages
 1. Build:
     1. `webdev build  --output web:docs`
-*if you have no idea what is that pls check this doc:*https://webdev.dartlang.org/tools/webdev
+
+*if you have no idea what is that pls check this doc:* https://webdev.dartlang.org/tools/webdev
 
 ## Conversion
 Converts SQL `Create Table` to JSON.
